@@ -1,0 +1,25 @@
+<div class="container">
+<h1 style="color: blue;"> Science </h1>
+<div >
+<button type="button" class="btn btn-primary mr-2" (click)="termOne()">Term 1</button>
+<button type="button" class="btn btn-primary" (click)="termTwo()">Term 2</button>
+</div>
+
+<div *ngIf="termOneData">
+    <h2>Term 1</h2>
+   <div >
+       <label class="col-sm-12 col-form-label">Unit One : {{details.unitTestOne}}</label>
+       <label class="col-sm-12 col-form-label">Unit Two : {{details.unitTestTwo}}</label>
+       <label class="col-sm-12 col-form-label">Sem One : {{details.semOne}} </label>
+   </div>
+</div>
+
+<div *ngIf="termTwoData">
+    <h2>Term 2</h2>
+    <div >
+        <label class="col-sm-12 col-form-label">Unit One : {{details.unitTestOne}}</label>
+        <label class="col-sm-12 col-form-label">Unit Two : {{details.unitTestTwo}}</label>
+        <label class="col-sm-12 col-form-label">Sem Two :{{details.semTwo}} </label>
+    </div>
+</div>
+</div>

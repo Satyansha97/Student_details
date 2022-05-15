@@ -1,0 +1,24 @@
+<div class="section">
+	<select [(ngModel)]="selectedOption" (click)=changeStudent()>
+    <option>Select</option>
+      <option *ngFor="let item of allStudents;let i = index" placeholder="select"  [selected]="i == 0">
+        {{item.name}}
+        
+      </option>
+      
+    </select>
+</div>
+
+
+<div *ngIf="selectedOption">
+    <nav class="row bg-dark"  >
+        <a class="m-2 p-2 text-white" routerLink="/std-names/{{selectedOption}}/english">English</a>
+   <a class="m-2 p-2 text-white" routerLink="/std-names/{{selectedOption}}/std-maths">Maths</a>
+   <!-- [routerLink]="['/std-maths/'+ item.id] -->
+        <!-- <a class="m-2 p-2 text-white" routerLink="/english/">English</a> -->
+        <a class="m-2 p-2 text-white" routerLink="/std-names/{{selectedOption}}/hindi">Hindi</a> 
+        <a class="m-2 p-2 text-white" routerLink="/std-names/{{selectedOption}}/science">Science</a> 
+        <a class="m-2 p-2 text-white" routerLink="/std-names/{{selectedOption}}/computer">Computer</a> 
+     
+    </nav>
+</div>
